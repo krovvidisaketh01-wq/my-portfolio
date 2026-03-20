@@ -134,7 +134,6 @@ export default function Portfolio() {
   const [activeNav, setActiveNav] = useState("About");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
