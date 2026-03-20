@@ -339,7 +339,7 @@ export default function Portfolio() {
             <a
               href="https://github.com/krovvidisaketh01-wq"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -362,7 +362,7 @@ export default function Portfolio() {
             <a
               href="https://www.linkedin.com/in/saketh-krovvidi-662510325/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
