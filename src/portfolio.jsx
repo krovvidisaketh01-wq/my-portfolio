@@ -150,7 +150,7 @@ export default function Portfolio() {
 
   const scrollTo = (id) => {
     document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false);
+    
   };
 
   const handleSubmit = (e) => {
