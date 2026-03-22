@@ -157,7 +157,6 @@ export default function Portfolio() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSending(true);
     emailjs.send(
       "service_mjqfg1c",
       "template_t7t574b",
@@ -169,12 +168,10 @@ export default function Portfolio() {
       "GTvEWXJQS28p5mSwJ"
     ).then(() => {
       setSent(true);
-      setSending(false);
       setFormData({ name: "", email: "", message: "" });
       setTimeout(() => setSent(false), 3000);
     }).catch(() => {
       alert("Failed to send message. Please try again.");
-      setSending(false);
     });
   };
 
