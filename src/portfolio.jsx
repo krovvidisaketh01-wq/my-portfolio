@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { useState, useEffect, useRef } from "react";
 
 const ACCENT = "#22d3ee";
@@ -153,11 +154,29 @@ export default function Portfolio() {
     
   };
 
+  const [sending, setSending] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    setFormData({ name: "", email: "", message: "" });
+    setSending(true);
+    emailjs.send(
+      "service_mjqfg1c",
+      "template_t7t574b",
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "GTvEWXJQS28p5mSwJ"
+    ).then(() => {
+      setSent(true);
+      setSending(false);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSent(false), 3000);
+    }).catch(() => {
+      alert("Failed to send message. Please try again.");
+      setSending(false);
+    });
   };
 
   const sectionStyle = { maxWidth: 860, margin: "0 auto", padding: "80px 24px" };
