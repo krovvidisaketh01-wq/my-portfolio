@@ -159,7 +159,7 @@ export default function Portfolio() {
     e.preventDefault();
     emailjs.send(
       "service_mjqfg1c",
-      "template_t7t574b",
+      "template_s279aix",
       {
         title: "Portfolio Contact",
         name: formData.name,
