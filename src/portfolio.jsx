@@ -161,6 +161,7 @@ export default function Portfolio() {
       "service_mjqfg1c",
       "template_t7t574b",
       {
+        title: "Portfolio Contact",
         name: formData.name,
         email: formData.email,
         message: formData.message,
