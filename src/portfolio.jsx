@@ -154,7 +154,6 @@ export default function Portfolio() {
     
   };
 
-  const [sending, setSending] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
